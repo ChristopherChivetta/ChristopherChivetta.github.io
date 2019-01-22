@@ -1,10 +1,11 @@
 ---
 layout: default
-
+title: Hank Quinlan's Blog
 ---
-<h1>{{ about.title }}</h1>
-<p class="meta"></p>
+	<h1>{{ page.title }}</h1>
+	<ul class="posts">
 
-<div class="post">
-  {{ content }}
-</div>
+	  {% for about in site.about %}
+	    <li><span></span> » <a href="{{ about.url }}" title="{{ about.title }}">{{ about.title }}</a></li>
+	  {% endfor %}
+	</ul>
